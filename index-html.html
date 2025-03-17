@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Unit Converter</h1>
+            <p>Convert between different units of measurement</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <nav class="unit-types">
+                <ul>
+                    <li><a href="#" class="active" data-unit-type="length">Length</a></li>
+                    <li><a href="#" data-unit-type="area">Area</a></li>
+                    <li><a href="#" data-unit-type="volume">Volume</a></li>
+                    <li><a href="#" data-unit-type="weight">Weight</a></li>
+                    <li><a href="#" data-unit-type="speed">Speed</a></li>
+                    <li><a href="#" data-unit-type="time">Time</a></li>
+                    <li><a href="#" data-unit-type="temperature">Temperature</a></li>
+                </ul>
+            </nav>
+
+            <div class="converter-container">
+                <form id="converter-form">
+                    <div class="form-group">
+                        <label for="value-input">Value:</label>
+                        <input type="number" id="value-input" step="any" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="from-unit">Convert From:</label>
+                        <select id="from-unit" required>
+                            <!-- Options will be dynamically populated -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="to-unit">Convert To:</label>
+                        <select id="to-unit" required>
+                            <!-- Options will be dynamically populated -->
+                        </select>
+                    </div>
+
+                    <button type="submit" class="convert-button">Convert Now</button>
+                </form>
+
+                <div class="result-container">
+                    <div id="result" class="hidden">
+                        <h3>Result:</h3>
+                        <p id="result-text"></p>
+                        <p id="result-formula"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Unit Converter. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/database.js"></script>
+    <script src="js/converters.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
